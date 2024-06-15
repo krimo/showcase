@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'fonts.css';
+
+@import 'tailwind-components/modal.css';
+
+.wp-block {
+    max-width: 100%;
+}
+
+.edit-post-sidebar {
+    min-width: 35vw;
+}
+
+@layer base {
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5 {
+        @apply font-heading font-black;
+    }
+
+    h1,
+    .h1 {
+        @apply text-4xl lg:text-6xl;
+    }
+    h2,
+    .h2 {
+        @apply text-4xl lg:text-5xl;
+    }
+    h3,
+    .h3 {
+        @apply text-3xl lg:text-4xl;
+    }
+    h4,
+    .h4 {
+        @apply text-2xl leading-tight lg:text-3xl;
+    }
+    h5,
+    .h5 {
+        @apply text-xl leading-tight lg:text-2xl;
+    }
+
+    .p1 {
+        @apply lg:leading-135	 text-2xl lg:text-4xl;
+    }
+
+    .p2 {
+        @apply text-xl leading-snug lg:text-2xl;
+    }
+
+    .p3 {
+        @apply text-lg leading-snug lg:text-xl lg:leading-normal;
+    }
+
+    .p4 {
+        @apply leading-snug lg:text-lg lg:leading-normal;
+    }
+
+    .p5 {
+        @apply text-sm leading-snug lg:text-base lg:leading-normal;
+    }
+
+    .p6 {
+        @apply text-s leading-snug lg:text-sm lg:leading-normal;
+    }
+
+    .p7 {
+        @apply text-xs leading-snug lg:leading-normal;
+    }
+
+    .w-subhead {
+        @apply text-base font-bold uppercase leading-6 tracking-widest lg:text-lg;
+    }
+
+    .subhead {
+        @apply font-bold uppercase leading-snug tracking-widest;
+    }
+
+    .subhead-one {
+        @apply subhead lg:text-lg;
+    }
+
+    .subhead-two {
+        @apply subhead text-sm lg:text-base;
+    }
+
+    .subhead-three {
+        @apply subhead text-s lg:text-sm;
+    }
+
+    .wysiwyg ul {
+        @apply list-disc pl-8;
+    }
+
+    .wysiwyg ol {
+        @apply list-decimal pl-8;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply relative z-10 inline-block rounded-full border-2 px-8 py-4;
+    }
+
+    .block-preview-label {
+        @apply absolute right-2 top-2 rounded-sm bg-black p-1 px-3 text-xs font-bold uppercase leading-none text-white;
+    }
+}

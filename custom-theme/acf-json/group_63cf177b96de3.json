@@ -1,0 +1,91 @@
+{
+    "key": "group_63cf177b96de3",
+    "title": "Content Settings",
+    "fields": [
+        {
+            "key": "field_63cf177b09d4e",
+            "label": "Header Scripts",
+            "name": "content_header_scripts",
+            "type": "textarea",
+            "instructions": "Any additional scripts that need to be placed in the header of this page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "aria-label": "",
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_63dd3454d0cd4",
+            "label": "Body Scripts",
+            "name": "content_body_scripts",
+            "type": "textarea",
+            "instructions": "Any additional scripts that need to be placed in the body of this page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_63cf17c209d4f",
+            "label": "Footer Scripts",
+            "name": "content_footer_scripts",
+            "type": "textarea",
+            "instructions": "Any scripts that need to be placed just before the closing body tag.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "aria-label": "",
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1675441262
+}

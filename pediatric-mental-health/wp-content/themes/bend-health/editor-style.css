@@ -1,0 +1,91 @@
+@font-face {
+	font-family: 'Gazpacho';
+	font-weight: 100;
+	src: url('./webfonts/GazpachoThin/font.woff2') format('woff2'), url('./webfonts/GazpachoThin/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'Gazpacho';
+	font-weight: 300;
+	src: url('./webfonts/GazpachoLight/font.woff2') format('woff2'), url('./webfonts/GazpachoLight/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'Gazpacho';
+	font-weight: 400;
+	src: url('./webfonts/GazpachoRegular/font.woff2') format('woff2'), url('./webfonts/GazpachoRegular/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'Gazpacho';
+	font-weight: 500;
+	src: url('./webfonts/GazpachoMedium/font.woff2') format('woff2'), url('./webfonts/GazpachoMedium/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'Gazpacho';
+	font-weight: 600;
+	src: url('./webfonts/GazpachoBold/font.woff2') format('woff2'), url('./webfonts/GazpachoBold/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'Gazpacho';
+	font-weight: 700;
+	src: url('./webfonts/GazpachoHeavy/font.woff2') format('woff2'), url('./webfonts/GazpachoHeavy/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'Gazpacho';
+	font-weight: 900;
+	src: url('./webfonts/GazpachoBlack/font.woff2') format('woff2'), url('./webfonts/GazpachoBlack/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'SofiaProSoft';
+	font-weight: 300;
+	src: url('./webfonts/SofiaProSoftLight/font.woff2') format('woff2'), url('./webfonts/SofiaProSoftLight/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'SofiaProSoft';
+	font-weight: 300;
+	font-style: italic;
+	src: url('./webfonts/SofiaProSoftLightItalic/font.woff2') format('woff2'),
+		url('./webfonts/SofiaProSoftLightItalic/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'SofiaProSoft';
+	font-weight: 400;
+	src: url('./webfonts/SofiaProSoft/font.woff2') format('woff2'), url('./webfonts/SofiaProSoft/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'SofiaProSoft';
+	font-weight: 400;
+	font-style: italic;
+	src: url('./webfonts/SofiaProSoftItalic/font.woff2') format('woff2'), url('./webfonts/SofiaProSoftItalic/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'SofiaProSoft';
+	font-weight: 500;
+	src: url('./webfonts/SofiaProSoftMedium/font.woff2') format('woff2'), url('./webfonts/SofiaProSoftMedium/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'SofiaProSoft';
+	font-weight: 500;
+	font-style: italic;
+	src: url('./webfonts/SofiaProSoftMediumItalic/font.woff2') format('woff2'),
+		url('./webfonts/SofiaProSoftMediumItalic/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'SofiaProSoft';
+	font-weight: 600;
+	src: url('./webfonts/SofiaProSoftBold/font.woff2') format('woff2'), url('./webfonts/SofiaProSoftBold/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'SofiaProSoft';
+	font-weight: 600;
+	font-style: italic;
+	src: url('./webfonts/SofiaProSoftBoldItalic/font.woff2') format('woff2'),
+		url('./webfonts/SofiaProSoftBoldItalic/font.woff') format('woff');
+}
+
+body#tinymce {
+	padding: 20px;
+	font-family: 'SofiaProSoft';
+}
+
+:focus-visible {
+	outline: none;
+}

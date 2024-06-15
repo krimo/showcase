@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Gazpacho';
+	font-weight: 100;
+	src: url('./assets/webfonts/GazpachoThin/font.woff2') format('woff2'), url('./assets/webfonts/GazpachoThin/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'Gazpacho';
+	font-weight: 300;
+	src: url('./assets/webfonts/GazpachoLight/font.woff2') format('woff2'), url('./assets/webfonts/GazpachoLight/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'Gazpacho';
+	font-weight: 400;
+	src: url('./assets/webfonts/GazpachoRegular/font.woff2') format('woff2'),
+		url('./assets/webfonts/GazpachoRegular/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'Gazpacho';
+	font-weight: 500;
+	src: url('./assets/webfonts/GazpachoMedium/font.woff2') format('woff2'),
+		url('./assets/webfonts/GazpachoMedium/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'Gazpacho';
+	font-weight: 600;
+	src: url('./assets/webfonts/GazpachoBold/font.woff2') format('woff2'), url('./assets/webfonts/GazpachoBold/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'Gazpacho';
+	font-weight: 700;
+	src: url('./assets/webfonts/GazpachoHeavy/font.woff2') format('woff2'), url('./assets/webfonts/GazpachoHeavy/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'Gazpacho';
+	font-weight: 900;
+	src: url('./assets/webfonts/GazpachoBlack/font.woff2') format('woff2'), url('./assets/webfonts/GazpachoBlack/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'SofiaProSoft';
+	font-weight: 300;
+	src: url('./assets/webfonts/SofiaProSoftLight/font.woff2') format('woff2'),
+		url('./assets/webfonts/SofiaProSoftLight/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'SofiaProSoft';
+	font-weight: 300;
+	font-style: italic;
+	src: url('./assets/webfonts/SofiaProSoftLightItalic/font.woff2') format('woff2'),
+		url('./assets/webfonts/SofiaProSoftLightItalic/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'SofiaProSoft';
+	font-weight: 400;
+	src: url('./assets/webfonts/SofiaProSoft/font.woff2') format('woff2'), url('./assets/webfonts/SofiaProSoft/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'SofiaProSoft';
+	font-weight: 400;
+	font-style: italic;
+	src: url('./assets/webfonts/SofiaProSoftItalic/font.woff2') format('woff2'),
+		url('./assets/webfonts/SofiaProSoftItalic/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'SofiaProSoft';
+	font-weight: 500;
+	src: url('./assets/webfonts/SofiaProSoftMedium/font.woff2') format('woff2'),
+		url('./assets/webfonts/SofiaProSoftMedium/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'SofiaProSoft';
+	font-weight: 500;
+	font-style: italic;
+	src: url('./assets/webfonts/SofiaProSoftMediumItalic/font.woff2') format('woff2'),
+		url('./assets/webfonts/SofiaProSoftMediumItalic/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'SofiaProSoft';
+	font-weight: 600;
+	src: url('./assets/webfonts/SofiaProSoftBold/font.woff2') format('woff2'),
+		url('./assets/webfonts/SofiaProSoftBold/font.woff') format('woff');
+}
+@font-face {
+	font-family: 'SofiaProSoft';
+	font-weight: 600;
+	font-style: italic;
+	src: url('./assets/webfonts/SofiaProSoftBoldItalic/font.woff2') format('woff2'),
+		url('./assets/webfonts/SofiaProSoftBoldItalic/font.woff') format('woff');
+}
+
+@layer base {
+	h1,
+	.h1,
+	h2,
+	.h2,
+	h3,
+	.h3,
+	h4,
+	.h4,
+	h5,
+	.h5 {
+		@apply font-heading font-black;
+	}
+
+	h1,
+	.h1 {
+		@apply text-4xxl leading-tighter lg:text-6xxl;
+	}
+	h2,
+	.h2 {
+		@apply text-4xl leading-tighter lg:text-5xxl;
+	}
+	h3,
+	.h3 {
+		@apply text-3xl leading-tighter lg:text-4xxl;
+	}
+	h4,
+	.h4 {
+		@apply text-2xl leading-tight lg:text-3xxl;
+	}
+	h5,
+	.h5 {
+		@apply text-xl leading-tight lg:text-3lg;
+	}
+
+	.p1 {
+		@apply text-2xl	 lg:text-4xl lg:leading-135;
+	}
+
+	.p2 {
+		@apply text-xl leading-snug lg:text-2xxl;
+	}
+
+	.p3 {
+		@apply text-lg leading-snug lg:text-xl lg:leading-normal;
+	}
+
+	.p4 {
+		@apply leading-snug lg:text-lg lg:leading-normal;
+	}
+
+	.p5 {
+		@apply text-sm leading-snug lg:text-base lg:leading-normal;
+	}
+
+	.p6 {
+		@apply text-s leading-snug lg:text-sm lg:leading-normal;
+	}
+
+	.p7 {
+		@apply text-xs leading-snug lg:leading-normal;
+	}
+
+	.w-subhead {
+		@apply text-base font-bold uppercase leading-6 tracking-widest lg:text-lg;
+	}
+
+	.subhead {
+		@apply font-bold uppercase leading-snug tracking-widest;
+	}
+
+	.subhead-one {
+		@apply subhead lg:text-lg;
+	}
+
+	.subhead-two {
+		@apply subhead text-sm lg:text-base;
+	}
+
+	.subhead-three {
+		@apply subhead text-s lg:text-sm;
+	}
+}
+
+@layer components {
+	.link {
+		@apply relative before:absolute before:bottom-0 before:left-0 before:-z-1 before:block before:h-3 before:w-full before:origin-bottom before:scale-y-[0.25] before:bg-yellow-400 before:transition before:ease-out-quad hover:before:scale-y-100;
+	}
+
+	.btn {
+		@apply relative z-10 inline-block rounded-full border-2 py-4 px-8.5 text-center leading-smaller transition duration-200 ease-out-quad before:absolute before:left-0 before:bottom-0 before:-z-1 before:block before:h-full before:w-full before:rounded-full before:bg-transparent before:shadow-btn before:transition before:ease-out-quad focus:active:before:shadow-none disabled:pointer-events-none disabled:border-gray-200 disabled:bg-transparent disabled:text-gray-300 disabled:before:hidden lg:hover:-translate-y-[3px] lg:hover:before:shadow-btnHover lg:hover:active:-translate-y-[0px] ;
+	}
+
+	.btn:disabled > svg path {
+		@apply fill-gray-300;
+	}
+
+	.btn-primary {
+		@apply btn border-black bg-yellow-400  active:shadow-none;
+	}
+
+	.btn-secondary {
+		@apply btn border-black px-1.5 py-0.7 active:shadow-none;
+	}
+
+	.btn-secondary-icon {
+		@apply btn-secondary flex items-center space-x-2 shadow-none hover:shadow-none;
+	}
+
+	.btn-icon {
+		@apply relative before:absolute before:top-1/2 before:left-1/2 before:-z-1 before:block before:h-[30px] before:w-[30px] before:origin-center before:-translate-y-1/2 before:-translate-x-1/2 before:scale-0 before:rounded-full before:bg-yellow-400 before:transition before:ease-out-quad hover:before:scale-[1.33] active:before:scale-100 lg:scale-110;
+	}
+
+	.lesson-rolling-audio-paragraph ul,
+	.play-section-content ul {
+		@apply list-disc space-y-2 pl-5 md:pl-8 text-left;
+	}
+
+	.lesson-rolling-audio-paragraph ol,
+	.play-section-content ol {
+		@apply list-decimal space-y-2 pl-5 md:pl-8 text-left;
+	}
+
+	.lesson-rolling-audio-paragraph table {
+		@apply hidden;
+	}
+
+	.curtain-parent {
+		clip-path: ellipse(193% 100% at 50% 100%);
+	}
+
+	.curtain-slide {
+		clip-path: ellipse(150% 100% at 50% 100%);
+	}
+	.curtain-slide--bottom {
+		clip-path: ellipse(100% 100% at 50% 100%);
+	}
+}
+
+@layer utilities {
+	.absolute-center {
+		@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+	}
+}

@@ -1,0 +1,13 @@
+import { Outlet } from 'react-router-dom';
+import * as ChildrenViews from './index';
+
+const {{pascalCase name}} = (props) => {
+	return (
+		<div>
+			<h2 className="text-2xl lg:text-6xl">{{pascalCase name}} VIEW</h2>
+			<Outlet />	
+		</div>
+	);
+}
+
+export default Object.assign({{pascalCase name}}, { ...ChildrenViews });

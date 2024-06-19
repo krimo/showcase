@@ -1,0 +1,274 @@
+.mod--project_listing {
+	margin: 0 0 50px;
+
+	.mobile-tax-toggle,
+	.taxonomy_filters button {
+		font-size: 13px;
+		line-height: 1;
+		padding: 15px 0;
+		letter-spacing: .1em;
+		border: 0;
+		outline: none;
+		display: block;
+		background: #000;
+		color: #fff;
+		width: 100%;
+		@include bold;
+		text-transform: uppercase;
+		letter-spacing: .5px;
+		margin: 0 auto;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.mobile-tax-toggle {
+
+		&:after {
+			content: '';
+			display: inline-block;
+			width: 30px;
+			height: 21px;
+			background: url(../images/filter-icon.svg) 50% no-repeat;
+			margin-left: 5px;
+			position: relative;
+			top: -3px;
+			vertical-align: middle;
+			background-size: 15px auto;
+		    background-position: top 8px center;
+		}
+
+		@include bp($m) {
+			display: none;
+		}
+	}
+
+	.taxonomy_filters {
+		text-align: center;
+
+		@include bp($m){
+			display: block !important;
+		}
+
+		button {
+			color: #c2c2c2;
+			transition: .3s ease;
+
+
+			span {
+				position: relative;
+				padding-bottom: 5px;
+
+				&:after {
+					content: '';
+					position: absolute;
+						bottom: 0; left: 0;
+					width: 100%;
+					height: 2px;
+					background: #fff;
+					transition: $speed $easing;
+					transform: scaleX(0);
+				}
+			}
+
+			&:hover,
+			&.selected {
+				color: #fff;
+
+				span {
+					&:after {
+						transform: scaleX(1);
+					}
+				}
+
+			}
+
+			@include bp($m) {
+				line-height: (24/16);
+				display: inline-block;
+				width: auto;
+				background: none;
+				padding: 5px 0;
+				letter-spacing: .5px;
+				margin: 10px 25px;
+
+			}
+		}
+
+		@include bpmax($m){
+			display: none;
+		}
+	}
+
+	.taxonomy_descriptions {
+		max-width: 600px;
+		margin: 20px auto 50px;
+		text-align: center;
+		color: #fff;
+		position: relative;
+
+		h2 {
+			font-size: 38px;
+			margin-bottom: 20px;
+			@include extra_light;
+
+			@include bp($m) {
+				display: none;
+			}
+		}
+
+		.filter-description {
+			display: none;
+			position: absolute;
+			top: 0; left: 0;
+			width: 100%;
+
+			&.active {
+				position: static;
+			}
+		}
+	}
+
+	.project-grid {
+		margin: 0 -5px;
+		overflow: hidden;
+	}
+
+	// the container
+	.project {
+		float: left;
+		width: 50%;
+		padding: 5px;
+		display: flex;
+		flex-direction: column;
+		transition: opacity .3s ease;
+		position: relative;
+
+		&.is-filtered-out {
+			opacity: .25;
+			filter: grayscale(100);
+			// pointer-events: none;
+		}
+
+		@include bp($m) {
+			width: 25%;
+		}
+
+		.play-button {
+
+			top: 15px; left: 15px;
+			width: 30px;
+			height: 30px;
+			// transform: translate(-50%, -50%);
+			transition: .3s ease;
+
+			@include bp($m) {
+				width: 66px;
+				height: 66px;
+				top: 30px;
+				left: 30px;
+				// top: 50%;
+				// left: 50%;
+				// margin: -33px 0 0 -33px;
+				opacity: 0;
+			}
+		}
+
+		// the link
+		&__content {
+			background: 50% no-repeat;
+			background-size: cover;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+			background-image: url(../images/placeholder.png);
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0; left: 0; bottom: -1px; right: 0;
+				background: linear-gradient(rgba(#141E30, 0), rgba(#141E30, 1));
+				mix-blend-mode: multiply;
+				opacity: .75;
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				padding-bottom: 100%;
+			}
+			> * {
+				position: absolute;
+			}
+
+			&__meta {
+				color: #fff;
+				bottom: 15px;
+				left: 15px;
+				right: 15px;
+
+				line-height: (16/14);
+
+				@include bp($m) {
+					bottom: 30px;
+					left: 30px;
+					right: 30px;
+				}
+
+			}
+
+			@include bp($m) {
+
+				&:before,
+				.project__content__meta {
+					opacity: 0;
+					transition: .3s ease;
+				}
+
+				.project__content__meta {
+					transform: translateY(20px);
+				}
+
+				&:hover {
+					.play-button {
+						opacity: 1;
+					}
+					&:before,
+					.project__content__meta {
+						opacity: 1;
+						transform: translateY(0px);
+					}
+				}
+			}
+
+			.client-name,
+			.project-name {
+				font-size: 14px;
+				display: inline;
+				@include bp($m) {
+					display: block;
+				}
+			}
+
+			.client-name {
+
+				@include bp($m) {
+					font-size: 26px;
+					line-height: (30/26);
+					@include black;
+					margin-bottom: 10px;
+
+					span {
+						display: none;
+					}
+				}
+
+			}
+
+			.project-name {
+				@include bp($m) {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+.taxonomy {
+	padding: 50px 0;
+
+	.post-feed {
+		@include span(12);
+
+		.taxonomy__title {
+			margin-bottom: 50px;
+		}
+
+		.post {
+			margin-bottom: 50px;
+		}
+
+	}
+
+}

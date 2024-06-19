@@ -1,0 +1,43 @@
+{
+    "key": "group_5a453fa40469c",
+    "title": "Google Analytics",
+    "fields": [
+        {
+            "key": "field_5a453faf550b4",
+            "label": "Tracking ID",
+            "name": "tracking_id",
+            "type": "text",
+            "instructions": "Find your tracking ID by following instructions on <a href=\"https:\/\/support.google.com\/analytics\/answer\/1008080?hl=en\" target=\"_blank\">Google Support<\/a>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "UA-########-#",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1526061757
+}

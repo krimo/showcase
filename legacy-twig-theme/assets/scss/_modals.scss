@@ -1,0 +1,135 @@
+.modal {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1001;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	overflow: auto;
+	opacity: 0;
+	pointer-events: none;
+	background-image: linear-gradient(to top left, #141E30 0%, #141E30 40%, #0F4582 100%);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	&__content {
+		width: 100%;
+		height: auto;
+		max-width: 1200px;
+		padding: 35px 0;
+		text-align: center;
+		position: relative;
+		margin: auto;
+		z-index: 2;
+		color: #fff;
+		text-align: left;
+
+		@include bp($m){
+			padding: 50px 80px;
+		}
+	}
+
+	&--active {
+		opacity: 1;
+		pointer-events: all;
+		transition: transform $speed $easing, opacity $speed $easing;
+	}
+
+	&__close {
+		position: absolute;
+		top: 0px;
+		right: 0;
+		width: 25px;
+		height: 25px;
+		text-indent: -9999px;
+		overflow: hidden;
+		cursor: pointer;
+		z-index: 3;
+
+		@include bp($m) {
+			width: 36px;
+			height: 36px;
+			right: 80px;
+		}
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%; left: 50%;
+			width: 100%;
+			height: 3px;
+			background: #fff;
+		}
+
+		&:before {
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+
+		&:after {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+	}
+
+	.client-name {
+		font-size: 45px;
+		@include black;
+		text-transform: uppercase;
+	}
+
+	.pipe {
+		display: inline-block;
+		height: 45px;
+		width: 20px;
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 8px; left: 50%;
+			width: 1px;
+			height: 100%;
+			background: #fff;
+		}
+	}
+
+	.project-name {
+		font-size: 22px;
+	}
+
+	.video-details {
+		margin-top: 35px;
+	}
+
+	@include bpmax($m){
+
+		.client-name {
+			font-size: 26px;
+		}
+
+		.pipe {
+			height: 26px;
+
+			&:after {
+				top: 4px;
+			}
+		}
+
+		.project-name {
+			font-size: 16px;
+		}
+
+		.video-details {
+			margin-top: 20px;
+		}
+	}
+}
+
+body.modal--active {
+	overflow: hidden;
+}

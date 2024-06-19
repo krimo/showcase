@@ -1,0 +1,37 @@
+{% if post_password %}
+
+    <div class="container">
+		{{ password_form }}
+	</div>
+
+{% else %}
+
+    {% if post.post_status == 'private' and logged_in == 'false' %}
+
+        {{ login_form }}
+
+    {% else %}
+
+        {% for module in modules %}
+
+          {% if module.exists %}
+
+            {% set modulepath = '/modules/'~module.acf_fc_layout~'/'~module.acf_fc_layout~'.twig' %}
+
+        	{{ include(modulepath, {module : module, options : options }) }}
+
+          {% else %}
+
+        	<div class="module-not-found">
+        		<div class="container">
+        			<h3>{{ module.acf_fc_layout }} module not found. <br>Please create {{ module.acf_fc_layout }} module within the modules folder</h3>
+        		</div>
+        	</div>
+
+          {% endif %}
+
+        {% endfor %}
+
+    {% endif %}
+
+{% endif %}

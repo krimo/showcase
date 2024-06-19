@@ -1,0 +1,26 @@
+<section class="mod mod--two_column_content">
+
+	<div class="container">
+		<div class="width-set">
+			<div class="content-grid">
+				{% if module.left %}
+				<div class="content content--left">
+					<div class="content__inner">
+						{{ module.left }}
+					</div>
+				</div>
+				{% endif %}
+
+
+				{% if module.right %}
+				<div class="content content--right">
+					<div class="content__inner">
+						{{ module.right }}
+					</div>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+</section>

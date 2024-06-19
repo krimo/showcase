@@ -1,0 +1,25 @@
+<section class="mod mod--team_listing">
+	<div class="container">
+		<div class="width-set">
+			<div class="team-container">
+				{% for member in module.team %}
+					<div class="team-member">
+						<div class="team-member-gutter">
+							<div class="team-member__photo" style="background-image: url({{ member.photo.sizes.medium_large }})"></div>
+							<!-- /.team-member__photo -->
+							<h3 class="team-member__name">{{ member.name }}</h3>
+							<!-- /.team-member__name -->
+							<h4 class="team-member__title">{{ member.title }}</h4>
+							<!-- /.team-member__title -->
+						</div>
+						<!-- /.team-member-gutter -->
+					</div>
+					<!-- /.team-member -->
+				{% endfor %}
+			</div>
+			<!-- /.team-container -->
+		</div>
+		<!-- /.width-set -->
+	</div>
+	<!-- /.container -->
+</section>

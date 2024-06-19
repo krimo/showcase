@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="81px" height="81px" viewBox="0 0 81 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>play-button</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(-680.000000, -1567.000000)">
+            <g id="VIDEO-1" transform="translate(0.000000, 1203.000000)">
+                <g id="button/play-white" transform="translate(680.000000, 364.000000)">
+                    <g id="button/play" transform="translate(0.511905, 0.481928)">
+                        <polygon id="Triangle" fill="#FFFFFF" fill-rule="nonzero" transform="translate(44.000000, 41.000000) rotate(90.000000) translate(-44.000000, -41.000000) " points="44 30.5 62 51.5 26 51.5"></polygon>
+                        <circle id="Oval" stroke="#FFFFFF" stroke-width="3" fill-rule="nonzero" cx="40" cy="40" r="38.5"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

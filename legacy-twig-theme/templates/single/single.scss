@@ -1,0 +1,66 @@
+.single-project {
+	color: #fff;
+
+	&__content {
+		padding: 10px;
+
+		@include bp($m) { padding: 0 25px; }
+	}
+
+	.client-name {
+		font-size: 45px;
+		@include black;
+		text-transform: uppercase;
+	}
+
+	.pipe {
+		display: inline-block;
+		height: 45px;
+		width: 20px;
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 8px; left: 50%;
+			width: 1px;
+			height: 100%;
+			background: #fff;
+		}
+	}
+
+	.project-name {
+		font-size: 22px;
+	}
+
+	.video-details {
+		margin-top: 35px;
+	}
+
+	.description {
+		padding-bottom: 30px;
+	}
+
+	@include bpmax($m){
+
+		.client-name {
+			font-size: 26px;
+		}
+
+		.pipe {
+			height: 26px;
+
+			&:after {
+				top: 4px;
+			}
+		}
+
+		.project-name {
+			font-size: 16px;
+		}
+
+		.video-details {
+			margin-top: 20px;
+		}
+	}
+}

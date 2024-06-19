@@ -1,0 +1,94 @@
+<section class="mod mod--featured_projects">
+
+	{% if module.project_listing %}
+	<div class="project-listing" id="featured-projects-pin">
+
+		<nav class="project-listing__nav">
+			{% for project in module.project_listing %}
+			<span data-section="{{ loop.index0 }}" class="dot {% if loop.first %}active{% endif %}"></span>
+			{% endfor %}
+		</nav><!-- /.project-listing__nav -->
+
+		{% for project in module.project_listing %}
+		<div class="featured-project featured-project--active" id="featured-project-{{ loop.index0 + 1 }}">
+
+			<div class="featured-project__bg bg-image-{{ project.poster.ID }}"></div>
+			<!-- /.featured-project__bg -->
+
+			{% if project.looping_video %}
+			<div class="featured-project__bg__video">
+				<video playsinline loop autoplay muted src="{{ project.looping_video.url }}"></video>
+			</div>
+			<!-- /.featured-project__bg bg-video -->
+			{% endif %}
+
+			<div class="featured-project__vimeo">
+				<!-- featured_projects_iframes -->
+				<div class="repsonsive-video">
+
+				</div>
+				<!-- /.repsonsive-video -->
+			</div>
+			<!-- /.featured-project__vimeo -->
+
+			<div class="container animated">
+				<div class="width-set">
+
+					<!-- <a href="#" data-vimeo="{{ project.ID }}" class="play-button mobile-only">Launch modal</a> -->
+					<a href="#" data-modal="project-{{ project.post_name }}" class="play-button mobile-only">Launch modal</a>
+
+
+
+					<p class="featured-project__categories"><strong>{{ project.cats }}</strong></p>
+					<!-- /.featured-project__categories -->
+
+					<div class="featured-project__tagline wysiwyg">{{ project.tagline }}</div>
+					<!-- /.featured-project__tagline -->
+
+					<p class="featured-project__title">{% if project.client %}{{ project.client }}: {% endif %}{{ project.post_title }}</p>
+					<!-- /.featured-project__title -->
+				</div>
+				<!-- /.width-set -->
+			</div>
+			<!-- /.container -->
+
+			<!-- <a href="#" data-vimeo="{{ project.ID }}" class="play-button desktop-only">Launch modal</a> -->
+			<a href="#" data-modal="project-{{ project.post_name }}" class="play-button desktop-only">Launch modal</a>
+
+			{% if loop.last == false %}
+			<button class="arrow-down" data-section="{{ loop.index0 + 1 }}">{{ module.arrowSVG }}</button>
+			{% endif %}
+
+		</div>
+		<!-- /.featured-project -->
+		{% endfor %}
+
+	</div>
+	<!-- /.project-listing -->
+
+	{% endif %}
+
+</section>
+
+<div class="modals">
+
+	{% for project in module.project_listing %}
+
+		<div id="project-{{ project.post_name }}" data-project="{{ project.post_name }}" class="modal modal--video">
+			<div class="modal__content">
+
+				<div class="modal__close"></div>
+
+				<div class="responsive-video"></div>
+
+				<div class="video-details">
+					<span class="client-name">{{ project.client }}</span>
+					<span class="pipe"></span>
+					<span class="project-name">{{ project.name }}</span>
+				</div>
+			</div>
+		</div>
+
+	{% endfor %}
+
+</div>

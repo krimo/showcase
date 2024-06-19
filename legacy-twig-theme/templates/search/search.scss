@@ -1,0 +1,12 @@
+.search-results {
+
+	&__heading {
+		margin: 50px 0;
+		@include span(12);
+	}
+
+	.post {
+		margin-bottom: 25px;
+		@include span(12);
+	}
+}

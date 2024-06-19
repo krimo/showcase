@@ -1,0 +1,83 @@
+#tinymce {
+	 background: #fff;
+	 padding: 20px !important;
+	 display: block;
+}
+
+#tinymce,
+.wysiwyg {
+
+	h1 {
+		font-size: 48px;
+		line-height: (72/64);
+		@include extra_light;
+		text-transform: uppercase;
+		letter-spacing: -.5px;
+
+		@include bp($m) {
+			font-size: 64px;
+		}
+	}
+
+	h2 {
+		font-size: 36px;
+		line-height: (57/45);
+		@include extra_light;
+		margin-bottom: .3em;
+
+		@include bp($m) {
+			font-size: 45px;
+		}
+	}
+
+	h3 {
+		@include light;
+		font-size: 22px;
+		line-height: (34/22);
+	}
+
+	h4 {
+		@include bold;
+		font-size: 12px;
+		line-height: (22/14);
+		text-transform: uppercase;
+		letter-spacing: .5px;
+
+		@include bp($m){
+			font-size: 14px;
+		}
+	}
+
+	.blue {
+		color: $blue;
+	}
+
+	b,
+	strong {
+		@include bold;
+	}
+
+	a {
+		color: #fff;
+
+		&.button {
+			color: #000;
+		}
+	}
+
+	p {
+		margin-bottom: 30px;
+	}
+
+	img {
+
+		&.aligncenter {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&.alignright {
+			margin-left: auto;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+<section class="mod mod--header_banner">
+
+	<div class="header_banner__bg" style="background-image: url({{ module.image.url }});">
+
+		{% if module.video %}
+			<video playsinline autoplay muted loop src="{{ module.video.url }}"></video>
+		{% endif %}
+
+		<div class="container">
+			<div class="wysiwyg">
+				{{ module.content }}
+			</div>
+			<!-- /.wysiwyg -->
+		</div>
+		<!-- /.container -->
+
+	</div>
+	<!-- /.header_banner__bg -->
+
+	<button class="arrow-down">{{ module.arrowSVG }}</button>
+
+</section>

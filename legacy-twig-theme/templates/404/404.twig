@@ -1,0 +1,40 @@
+{% if post %}
+
+	{% for module in modules %}
+
+	  {% set extra_classes = '' %}
+
+	  {% if module.exists %}
+
+		  <section class="mod mod--{{ module.acf_fc_layout }} {{ extra_classes }}">
+
+		    {% set modulepath = '/modules/'~module.acf_fc_layout~'/'~module.acf_fc_layout~'.twig' %}
+
+			{{ include(modulepath, {module : module, options : options }) }}
+
+		  </section>
+
+	  {% else %}
+
+		<div class="module-not-found">
+			<div class="container" style="text-align: center;">
+				<h3>{{ module.acf_fc_layout }} module not found. <br>please create {{ module.acf_fc_layout }} module within the modules folder</h3>
+			</div>
+		</div>
+
+	  {% endif %}
+
+	{% endfor %}
+
+{% else %}
+
+	<div class="error-404">
+		<div class="content">
+			<h1>404 Error</h1>
+			<p>Sorry, the page you were looking for isn't here.<p/>
+		</div>
+		<!-- /.content -->
+	</div>
+	<!-- /.error-404 -->
+
+{% endif %}

@@ -1,0 +1,17 @@
+<section class="mod mod--instagram_feed">
+	<div class="container">
+		<div class="width-set">
+			<div class="instagram-box">
+
+
+				{% for item in module.instagramFeed %}
+					<div class="instagram-wrapper{% if loop.index > 4 %} hidden{% endif %}">
+						<div class="instagram-photo" style="background-image: url({{ item.images.standard_resolution.url }});"></div>
+					</div>
+				{% endfor %}
+
+
+			</div>
+		</div>
+	</div>
+</section>

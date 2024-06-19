@@ -1,0 +1,46 @@
+{
+    "key": "group_5a3d2fefd1883",
+    "title": "404 Error Page",
+    "fields": [
+        {
+            "key": "field_5a3d2ffa18a0b",
+            "label": "404 Page",
+            "name": "404_page",
+            "type": "post_object",
+            "instructions": "This page will display when a user visits a broken or nonexistent link.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1513962208
+}

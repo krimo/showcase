@@ -1,0 +1,22 @@
+<div class="taxonomy">
+
+	<div class="container">
+
+	    <div class="post-feed">
+
+			<h1 class="taxonomy__title">{{ title }}</h1>
+
+	        {% for post in posts %}
+
+				{{ include('/template-parts/post.twig', { post : post } ) }}
+
+	        {% endfor %}
+
+	    </div>
+	    <!-- /.post-listing -->
+
+	</div>
+	<!-- /.container -->
+
+</div>
+<!-- /.taxonomy -->

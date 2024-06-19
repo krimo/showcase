@@ -1,0 +1,16 @@
+.mod--callout {
+	padding: 100px 0;
+	color: #fff;
+	// background-image: linear-gradient(to left, #141E30 0%, #141E30 40%, #0F4582 100%);
+	background-image: linear-gradient(to bottom right, #141E30 0%, #141E30 10%, #0F4582 100%);
+
+	p {
+		max-width: 800px;
+		margin: 0 auto;
+		font-size: 18px;
+
+		@include bp($m){
+			font-size: 22px;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{% if post.post_type == 'project' %}
+	<div class="container">
+		<article class="single-project__content">
+			<header>
+				<div class="responsive-video">{{ post.fields.vimeo }}</div>
+
+				<div class="video-details">
+					<span class="client-name">{{ post.fields.client }}</span>
+					<span class="pipe"></span>
+					<span class="project-name">{{ post.post_title }}</span>
+
+					{% if post.fields.tagline %}
+						<div class="short-description wysiwyg">{{ post.fields.tagline }}</div>
+					{% endif %}
+				</div>
+			</header>
+			<div class="description">{{ post.fields.short_description }}</div><!-- /.description -->
+		</article><!-- /.single-project__content -->
+	</div><!-- /.container -->
+{% else %}
+<div id="post-{{ post.id }}" class="single-post container">
+
+	<h1>{{ post.post_title  }}</h1>
+
+	<div class="single-post__content wysiwyg">
+		{{ post.post_content }}
+	</div>
+
+</div>
+{% endif %}

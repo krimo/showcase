@@ -1,0 +1,66 @@
+.mod--instagram_feed {
+	margin-bottom: 30px;
+	text-align: center;
+
+	@include bp($m){
+		margin-bottom: 50px;
+	}
+
+	.width-set {
+		padding-left: 5px;
+		padding-right: 5px;
+
+		@include bp($m){
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	.instagram-box {
+		overflow: hidden;
+		display: flex;
+		width: 100%;
+		flex-flow: row wrap;
+	}
+
+	.instagram-wrapper {
+		width: 50%;
+		border: 5px solid transparent;
+		position: relative;
+
+		.instagram-photo {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: relative;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			opacity: 0;
+			transition: opacity 1s $easing;
+
+			&:first-child,
+			&.show {
+				opacity: 1;
+				z-index: 20;
+			}
+		}
+
+		&.hidden {
+			display: none;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			padding-bottom: 100%;
+		}
+
+		@include bp($m){
+			width: 25%;
+		}
+	}
+}

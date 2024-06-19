@@ -1,0 +1,26 @@
+<section class="mod mod--box_file_upload" data-destination-folder="{{ module.destination_box_folder }}">
+	<div class="container">
+		<div class="form-container">
+			<h2 class="form-container__title">{{ module.title }}</h2>
+			
+			<progress class="mod--box_file_upload__progress" max="1" value="0"></progress>
+
+			<form class="file-upload-form" id="box-upload">
+
+				<div class="processing-overlay">
+					<img src="{{ module.tdir ~ '/assets/images/bars.svg' }}" alt="loading..." class="loader">
+					<p>Processing...</p>
+				</div>
+
+				<div class="fallback">
+					<input name="file" type="file"/>
+				</div>
+
+			</form>
+
+			<button type="submit" class="btn btn-primary upload-submit-button">Submit</button>
+
+			<div class="form-response"></div>
+		</div>
+	</div>
+</section>

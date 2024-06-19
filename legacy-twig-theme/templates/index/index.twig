@@ -1,0 +1,13 @@
+{% for module in modules %}
+
+  {% set extra_classes = '' %}
+
+  <section class="mod mod--{{ module.acf_fc_layout }} {{ extra_classes }}">
+
+    {% set modulepath = '/mod-'~module.acf_fc_layout~'/mod-'~module.acf_fc_layout~'-view.twig' %}
+
+    {{ include(modulepath, {module : module, options : options }) }}
+
+  </section>
+
+{% endfor %}

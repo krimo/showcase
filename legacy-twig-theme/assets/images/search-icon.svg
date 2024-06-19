@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="16px" viewBox="0 0 17 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UI/Search-DK" transform="translate(-1.000000, -2.000000)" stroke="#4A4A4A" stroke-width="1.63636364">
+            <g id="Search" transform="translate(10.751126, 10.381355) rotate(-50.000000) translate(-10.751126, -10.381355) translate(4.751126, 1.381355)">
+                <ellipse id="Oval-2" cx="5.72" cy="5.85" rx="5.72" ry="5.85"></ellipse>
+                <path d="M5.6,12.375 L5.6,17.775" id="Line" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

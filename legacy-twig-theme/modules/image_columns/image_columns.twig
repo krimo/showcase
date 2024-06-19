@@ -1,0 +1,25 @@
+<section class="mod mod--image_columns">
+
+	<div class="container">
+		<div class="width-set">
+			<div class="image-container">
+				<div class="image image--left" style="background-image: url({{ module.large_left_image.url }});">
+					{% if module.left_image_url %}
+						<a href="{{ module.left_image_url }}"></a>
+					{% endif %}
+				</div>
+				<!-- /.image image--left -->
+				<div class="image image--right" style="background-image: url({{ module.small_right_image.sizes.medium_large }});">
+					{% if module.right_image_url %}
+						<a href="{{ module.right_image_url }}"></a>
+					{% endif %}
+				</div>
+				<!-- /.image image--right -->
+			</div>
+			<!-- /.image-container -->
+		</div>
+		<!-- /.width-set -->
+	</div>
+	<!-- /.container -->
+
+</section>

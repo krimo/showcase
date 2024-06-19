@@ -1,0 +1,96 @@
+<section class="mod mod--project_listing">
+
+	<div class="container">
+
+		<div class="width-set">
+
+			<div class="taxonomies">
+				<a href="#" class="mobile-tax-toggle">Filter Projects</a>
+				<div class="taxonomy_filters">
+					{% for term in module.terms %}
+						<button class="filter-button {{ (term.slug == 'all-projects') ? 'selected' : '' }}" data-filter="{{ (term.slug == 'all-projects') ? '*' : '.' ~ term.slug }}"><span>{{ term.name }}</span></button>
+					{% endfor %}
+				</div>
+				<!-- /.taxonomy_filters -->
+
+				<div class="taxonomy_descriptions">
+					{% for term in module.terms %}
+						<div class="filter-description" data-filter="{{ term.slug }}">
+							<h2>{{ term.name }}</h2>
+							{{ term.description }}
+						</div>
+						<!-- /.filter-description -->
+					{% endfor %}
+				</div>
+				<!-- /.taxonomy_descriptions -->
+			</div>
+			<!-- /.taxonomies -->
+
+			<div class="project-grid">
+
+
+				{% for project in module.projects %}
+					<div class="project {{ project.terms }}" data-category="{{ project.terms }}">
+						<a href="#" data-modal="project-{{ project.slug }}" {% if project.image %}style="background-image: url({{ project.image.sizes.medium_large }})"{% endif %} class="project__content">
+
+							<span class="play-button"></span>
+
+							<div class="project__content__meta">
+								<h3 class="client-name">
+									{{ project.client }}<span>: </span>
+								</h3>
+								<!-- /.client-name -->
+								<p class="project-name">
+									{{ project.name }}
+								</p>
+								<!-- /.project-name -->
+							</div>
+							<!-- /.project__content__meta -->
+						</a>
+						<!-- /.project__content -->
+					</div>
+					<!-- /.project -->
+				{% endfor %}
+
+			</div>
+			<!-- /.project-grid -->
+
+		</div>
+		<!-- /.width-set -->
+
+	</div>
+	<!-- /.container -->
+
+</section>
+
+
+<div class="modals">
+
+	{% for project in module.projects %}
+
+		<div id="project-{{ project.slug }}" data-project="{{ project.slug }}" class="modal modal--video">
+			<div class="modal__content">
+
+				<div class="modal__close"></div>
+
+				<div class="responsive-video"></div>
+
+				<div class="video-details">
+					<span class="client-name">{{ project.client }}</span>
+					<span class="pipe"></span>
+					<span class="project-name">{{ project.name }}</span>
+
+					{% if project.tagline %}
+						<div class="short-description wysiwyg">{{ project.tagline }}</div>
+					{% endif %}
+				</div>
+
+				{% if project.short_description %}
+					<a href="{{project.url}}" class="button">Details</a>
+				{% endif %}
+			</div>
+		</div>
+
+	{% endfor %}
+
+</div>

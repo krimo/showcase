@@ -1,0 +1,197 @@
+// @font-face
+
+/*
+Interstate Hairline
+
+font-family: interstate, sans-serif;
+font-weight: 100;
+font-style: normal;
+
+Interstate Hairline Italic
+
+font-family: interstate, sans-serif;
+font-weight: 100;
+font-style: italic;
+
+Interstate Thin
+
+font-family: interstate, sans-serif;
+font-weight: 200;
+font-style: normal;
+
+Interstate Thin Italic
+
+font-family: interstate, sans-serif;
+font-weight: 200;
+font-style: italic;
+
+Interstate Extra Light
+
+font-family: interstate, sans-serif;
+font-weight: 300;
+font-style: normal;
+
+Interstate Extra Light Italic
+
+font-family: interstate, sans-serif;
+font-weight: 300;
+font-style: italic;
+
+Interstate Light
+
+font-family: interstate, sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Interstate Light Italic
+
+font-family: interstate, sans-serif;
+font-weight: 400;
+font-style: italic;
+
+Interstate Italic
+
+font-family: interstate, sans-serif;
+font-weight: 500;
+font-style: italic;
+
+Interstate Regular
+
+font-family: interstate, sans-serif;
+font-weight: 500;
+font-style: normal;
+
+Interstate Bold
+
+font-family: interstate, sans-serif;
+font-weight: 700;
+font-style: normal;
+
+Interstate Bold Italic
+
+font-family: interstate, sans-serif;
+font-weight: 700;
+font-style: italic;
+
+Interstate Black
+
+font-family: interstate, sans-serif;
+font-weight: 800;
+font-style: normal;
+
+Interstate Black Italic
+
+font-family: interstate, sans-serif;
+font-weight: 800;
+font-style: italic;
+
+Interstate Ultra Black
+
+font-family: interstate, sans-serif;
+font-weight: 900;
+font-style: normal;
+
+Interstate Ultra Black Italic
+
+font-family: interstate, sans-serif;
+font-weight: 900;
+font-style: italic;
+*/
+
+// vars
+$sans: "interstate", sans-serif;
+$condensed: "interstate-condensed", sans-serif;
+
+
+@mixin font {
+    font-family: $sans;
+}
+
+@mixin condensed {
+    font-family: $condensed;
+}
+
+@mixin extra_light {
+    font-weight: 300;
+}
+
+@mixin light {
+    font-weight: 400;
+}
+
+@mixin bold {
+    font-weight: 700;
+}
+
+@mixin black {
+    font-weight: 800;
+}
+
+@mixin regular {
+    font-style: normal;
+}
+
+@mixin italic {
+    font-style: italic;
+}
+
+// mixins
+@mixin h1 {
+  font-size: 26px;
+  line-height: 1.2;
+	@include bp($m){
+		font-size: 36px;
+	}
+}
+
+@mixin h2 {
+	font-size: 22px;
+  line-height: 1.1;
+	@include bp($m){
+		font-size: 30px;
+	}
+}
+
+@mixin h3 {
+  font-size: 24px;
+	line-height: $line-height;
+}
+
+@mixin h4 {
+  font-size: 20px;
+	line-height: $line-height;
+}
+
+@mixin smallText(){
+	font-size: 15px;
+	line-height: 1.1;
+}
+
+
+// styles
+body {
+	line-height: $line-height;
+	font-size: 16px;
+	font-family: $sans;
+	color: $gray;
+
+	@include bp($m){
+		font-size: 18px;
+	}
+}
+
+h1 {
+  @include h1;
+}
+
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
+h4 {
+  @include h4;
+}

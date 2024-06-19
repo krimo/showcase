@@ -1,0 +1,10 @@
+.mod--wysiwyg {
+    max-width: 1000px;
+    margin: 0 auto 50px;
+
+	.wysiwyg {
+		@include span(12);
+        color: #fff;
+	}
+
+}
